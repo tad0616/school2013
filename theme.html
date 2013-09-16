@@ -1,0 +1,22 @@
+<{assign var=theme_name value=$xoTheme->folderName}>
+
+<{includeq file="$theme_name/tpl/get_var.html"}>
+<{includeq file="$theme_name/tpl/header.html"}>
+<{includeq file="$theme_name/tpl/navbar.html"}>
+
+
+<{if $header_height > 0}>
+ <{includeq file="$theme_name/tpl/slideshow.html"}>
+<{/if}>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+  <{includeq file="$theme_name/tpl/$theme_type.html"}>
+  </div>
+</div>
+
+<{includeq file="$theme_name/tpl/footer.html"}>
+
+  </body>
+</html>
