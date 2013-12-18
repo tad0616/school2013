@@ -1,7 +1,14 @@
-<div class="span<{$lb_width}>">
-  <{includeq file="$theme_name/tpl/leftBlock.html"}>
-  <{includeq file="$theme_name/tpl/rightBlock.html"}>
-</div>
-<div class="span<{$center_width}>">
-  <{includeq file="$theme_name/tpl/centerZone.html"}>
-</div>
+<{if $xoBlocks.canvas_left or $xoBlocks.canvas_right}>
+  <div class="span<{$lb_width}>">
+    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+    <{includeq file="$theme_name/tpl/rightBlock.html"}>
+  </div>
+
+  <div class="span<{$center_width}>">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+<{else}>  
+  <div class="span12">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+<{/if}>

@@ -1,9 +1,29 @@
-<div class="span<{$center_width}>">
-  <{includeq file="$theme_name/tpl/centerZone.html"}>
-</div>
-<div class="span<{$lb_width}>">
-  <{includeq file="$theme_name/tpl/leftBlock.html"}>
-</div>
-<div class="span<{$rb_width}>">
-  <{includeq file="$theme_name/tpl/rightBlock.html"}>
-</div>
+<{if $xoBlocks.canvas_left and $xoBlocks.canvas_right}>
+  <div class="span<{$center_width}>">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+  <div class="span<{$lb_width}>">
+    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+  </div>
+  <div class="span<{$rb_width}>">
+    <{includeq file="$theme_name/tpl/rightBlock.html"}>
+  </div>
+<{elseif $xoBlocks.canvas_left and $xoBlocks.canvas_right==""}>
+  <div class="span9">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+  <div class="span3">
+    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+  </div>
+<{elseif $xoBlocks.canvas_left=="" and $xoBlocks.canvas_right}>
+  <div class="span9">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+  <div class="span3">
+    <{includeq file="$theme_name/tpl/rightBlock.html"}>
+  </div>  
+ <{else}>
+   <div class="span12">
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+  </div>
+ <{/if}>
