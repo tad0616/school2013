@@ -1,0 +1,31 @@
+<div class="txtcenter">
+  <form style="margin-top: 0;" action="<{xoAppUrl user.php}>" method="post">
+  <div class="row-fluid">
+    <label class="span3"><{$block.lang_username}></label>
+    <input type="text" name="uname" class="span9" value="<{$block.unamevalue}>" maxlength="25" />
+  </div>  
+  
+  <div class="row-fluid">
+    <label class="span3"><{$block.lang_password}></label>
+    <input type="password" name="pass" class="span9" maxlength="32" />
+  </div>  
+  
+  <div class="row-fluid">
+    <{if isset($block.lang_rememberme)}>
+      <label class="checkbox span6">
+        <input type="checkbox" name="rememberme" value="On" class ="formButton" /><{$block.lang_rememberme}>
+      </label>
+    <{/if}>
+  
+      <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+      <input type="hidden" name="op" value="login" />
+      <button type="submit" class="btn btn-info" ><{$block.lang_login}></button>
+      <{$block.sslloginlink}>
+    </div>  
+  </form>
+  <div class="row-fluid">
+  <a href="<{xoAppUrl user.php#lost}>" title="<{$block.lang_lostpass}>"><{$block.lang_lostpass}></a>
+  |
+  <a href="<{xoAppUrl register.php}>" title="<{$block.lang_registernow}>"><{$block.lang_registernow}></a>
+  </div>  
+</div>

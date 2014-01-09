@@ -1,53 +1,12 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode}>">
   <head>
-    <meta charset="<{$xoops_charset}>">
-
-  	<!-- Assign Theme name -->
-  	<{assign var=theme_name value=$xoTheme->folderName}>
-
     <title><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}></title>
-
+    <meta charset="<{$xoops_charset}>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="<{$xoops_meta_robots}>" />
-    <meta name="keywords" content="<{$xoops_meta_keywords}>" />
-    <meta name="description" content="<{$xoops_meta_description}>" />
-    <meta name="rating" content="<{$xoops_meta_rating}>" />
-    <meta name="author" content="<{$xoops_meta_author}>" />
-    <meta name="copyright" content="<{$xoops_meta_copyright}>" />
-    <meta name="generator" content="XOOPS" />
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/meta.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/link_css.html"}>
 
-    <{if !$xoops_module_header}>
-    <meta property="og:title" content="<{$xoops_pagetitle}>"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="<{$xoAppUrl}>"/>
-    <meta property="og:image" content="<{xoImgUrl img/tad0616.png}>"/>
-    <meta property="og:site_name" content="<{$xoops_sitename}>"/>
-    <meta property="fb:admins" content="723708204"/>
-    <meta property="og:description" content="<{$xoops_meta_description}>" />
-    <{/if}>
-
-  	<!-- Rss -->
-  	<link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
-
-
-    <!-- Sheet Css -->
-    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
-    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl css/xoops.css}>" />
-    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl css/style.css}>" />
-
-
-    
-    <!-- Bootstrap -->
-    <link href="<{xoAppUrl modules/tadtools/bsie/bootstrap/css/bootstrap.css}>" rel="stylesheet" media="screen">
-    
-    <!--[if lte IE 6]>
-    <link rel="stylesheet" href="<{xoAppUrl modules/tadtools/bsie/bootstrap/css/bootstrap-ie6.css}>">
-    <![endif]-->
-    <!--[if lte IE 7]>
-    <link rel="stylesheet" href="<{xoAppUrl modules/tadtools/bsie/bootstrap/css/ie.css}>">
-    <![endif]-->
-    
     <style type="text/css">
       body {
       <{if $navbar_pos=="navbar-static-top"}>
@@ -57,80 +16,23 @@
       <{else}>
         padding-top: 60px;
       <{/if}>
-        
+
         padding-bottom: 40px;
       }
       .sidebar-nav {
         padding: 9px 0;
       }
     </style>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="<{xoAppUrl modules/tadtools/bootstrap/css/bootstrap-responsive.css}>" rel="stylesheet" media="screen">
-    
+
     <script type='text/javascript'>
       if(typeof jQuery == 'undefined') {
       document.write("<script type='text/javascript' src='<{$xoops_url}>/modules/tadtools/jquery/jquery.js'><\/script>");
       }
     </script>
-    
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="<{xoImgUrl icons/favicon.ico}>">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<{xoImgUrl icons/favicon114.png}>">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<{xoImgUrl icons/favicon114.png}>">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<{xoImgUrl icons/favicon72.png}>">
-    <link rel="apple-touch-icon-precomposed" href="<{xoImgUrl icons/favicon57.png}>">
-
 
     <{$xoops_module_header}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/theme_css.html"}>
 
-    <!--導覽工具列、區塊標題CSS設定開始 by hc-->
-	<style type="text/css">
-    a.block_config{
-      float:<{$block_config}>;
-    }
-    legend.blockTitle{
-      color:<{$bt_text}> ; 
-      background: <{$bt_bg_color}> <{if $bt_bg_img}>url(<{$bt_bg_img}>) <{$bt_bg_repeat}><{/if}>;
-      text-indent: <{$bt_text_padding}>px;
-      <{$bt_radius}>;
-    }
-    .navbar-inner {
-      background-color: <{$navbar_bg_bottom}>;
-      background-image: -moz-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: -webkit-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: -o-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: linear-gradient(to bottom, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);  
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(<{$navbar_bg_top}>), to(<{$avbar_bg_bottom}>));  
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=<{$navbar_bg_top}>, endColorstr=<{$navbar_bg_bottom}>, GradientType=0);
-    }
-    .navbar .nav > li > a:hover {background-color: <{$navbar_hover}>;}
-    .navbar .nav li.dropdown.open > .dropdown-toggle,
-    .navbar .nav li.dropdown.active > .dropdown-toggle,
-    .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-      background-color: <{$navbar_hover}>;
-    }
-    .navbar .btn-navbar {
-      background-color: <{$navbar_bg_bottom}>;
-      background-image: -moz-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: -webkit-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: -o-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
-      background-image: linear-gradient(to bottom, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);  
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(<{$navbar_bg_top}>), to(<{$avbar_bg_bottom}>));  
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=<{$navbar_bg_top}>, endColorstr=<{$navbar_bg_bottom}>, GradientType=0);
 
-    }
-	
-	</style>
-  <!--導覽工具列、區塊標題CSS設定 by hc-->
   </head>
-
-  <body style="background: <{$bg_color}> url(<{$bg_img}>) <{$bg_position}> <{$bg_repeat}> <{$bg_attachment}>;font-size:<{$font_size}>;">
-  <style type="text/css">
-  body{color:<{$font_color}>;}
-  a{color:<{$link_color}>;}
-  a:hover{color:<{$hover_color}>;}
-  </style>
+  <body>

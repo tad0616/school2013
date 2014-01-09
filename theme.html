@@ -1,42 +1,18 @@
 <{assign var=theme_name value=$xoTheme->folderName}>
 
-<{includeq file="$theme_name/tpl/get_var.html"}>
+<{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/get_var.html"}>
 <{includeq file="$theme_name/tpl/header.html"}>
-<{includeq file="$theme_name/tpl/navbar.html"}>
-
-
-<{if $header_height > 0}>
- <{includeq file="$theme_name/tpl/slideshow.html"}>
-<{/if}>
-
+<{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/navbar.html"}>
 
 <div class="container-fluid">
+  <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/slideshow_responsive.html"}>
   <div class="row-fluid">
-  <{includeq file="$theme_name/tpl/$theme_type.html"}>
+    <{includeq file="$theme_name/tpl/$theme_type.html"}>
   </div>
 </div>
 
-<{includeq file="$theme_name/tpl/footer.html"}>
+  <{includeq file="$theme_name/tpl/footer.html"}>
+  <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/bootstrap_js.html"}>
 
-  <!--Bootstrap js-->
-  <script src="<{xoAppUrl modules/tadtools/bsie/bootstrap/js/bootstrap.js}>"></script>
-  <!--[if lte IE 6]>
-  <script type="text/javascript" src="<{xoAppUrl modules/tadtools/bsie/js/bootstrap-ie.js}>"></script>
-  <![endif]-->
-  <script type="text/javascript">
-  (function ($) {
-    $(document).ready(function() {
-      if ($.isFunction($.bootstrapIE6)) $.bootstrapIE6($(document));
-    });
-  })(jQuery);
-  </script>
-  <!--[if lte IE 8]>
-  <script type="text/javascript" src="<{xoAppUrl modules/tadtools/bsie/js/jquery.backgroundSize.js}>"></script>
-  <script>
-  $(document).ready(function() {
-    $('.ie_cover').css({backgroundSize: "cover"});
-  });
-  </script>
-  <![endif]-->  
   </body>
 </html>
