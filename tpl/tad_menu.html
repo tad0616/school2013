@@ -1,8 +1,0 @@
-<{php}>
-global $xoopsDB,$xoopsModule;
-$sql="select itemname,itemurl from ".$xoopsDB->prefix("tad_themes_menu")." where status='1' order by	position";
-$result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
-while(list($itemname,$itemurl)=$xoopsDB->fetchRow($result)){
-  echo "\t\t\t<li><a href=\"$itemurl\"><i class=\"icon-th-list\"></i> {$itemname}</a></li>\n";
-}
-<{/php}>
