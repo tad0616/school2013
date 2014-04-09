@@ -1,15 +1,18 @@
-<div id="leftBlock" class="well" style="<{$leftBlock}>">
+<{if $xoBlocks.canvas_left}>
   <{foreach item=block from=$xoBlocks.canvas_left}>
     <{if $block.content}>
-      <fieldset>
-      <{if $block.title}>
-        <{if $xoops_isadmin}>
-          <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a><br style="clear:both;">
+      <div class="leftBlock">
+        <{if $block.title}>
+          <{if $xoops_isadmin}>
+            <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a>
+            <div style="clear:both;"></div>
+          <{/if}>
+          <{includeq file="$theme_name/tpl/blockTitle.html"}>
         <{/if}>
-        <{includeq file="$theme_name/tpl/blockTitle.html"}>
-      <{/if}>
-      <div class="blockContent"><{$block.content}></div>
-      </fieldset>
+        <div class="blockContent">
+          <{$block.content}>
+        </div>
+      </div>
     <{/if}>
   <{/foreach}>
-</div>
+<{/if}>

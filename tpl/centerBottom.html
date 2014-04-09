@@ -1,12 +1,18 @@
 <{if $xoBlocks.page_bottomcenter}>
-    <{foreach item=block from=$xoBlocks.page_bottomcenter}>
-      <{if $block.content}>
-        <fieldset>
-        <{if $block.title}><{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a><br style="clear:both;"><{/if}>
-        <{includeq file="$theme_name/tpl/blockTitle.html"}>
+  <{foreach item=block from=$xoBlocks.page_bottomcenter}>
+    <{if $block.content}>
+      <div class="centerBottomBlock">
+        <{if $block.title}>
+          <{if $xoops_isadmin}>
+            <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a>
+            <div style="clear:both;"></div>
+          <{/if}>
+          <{includeq file="$theme_name/tpl/blockTitle.html"}>
         <{/if}>
-        <div class="blockContent"><{$block.content}></div>
-        </fieldset>
-      <{/if}>
-    <{/foreach}>
+        <div class="blockContent">
+          <{$block.content}>
+        </div>
+      </div>
+    <{/if}>
+  <{/foreach}>
 <{/if}>

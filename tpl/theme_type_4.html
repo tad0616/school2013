@@ -1,19 +1,29 @@
-<{if $xoBlocks.canvas_left}>
-    <div class="span<{$center_width}>">
+<div id="xoops_theme_content_zone" class="row-fluid">
+
+  <{if $xoBlocks.canvas_left}>
+
+    <div id="xoops_theme_content" class="<{if $theme_kind=="bootstrap"}>span<{/if}><{$center_width}>">
       <{includeq file="$theme_name/tpl/centerZone.html"}>
     </div>
-    <div class="span<{$lb_width}>">
+
+    <div id="xoops_theme_left_zone" class="<{if $theme_kind=="bootstrap"}>span<{/if}><{$lb_width}>" style="<{$leftBlocks}>">
       <{includeq file="$theme_name/tpl/leftBlock.html"}>
     </div>
 
-<{else}> 
-  <div class="span12">
-    <{includeq file="$theme_name/tpl/centerZone.html"}>
-  </div>
-<{/if}> 
-    
+  <{else}>
+
+    <div id="xoops_theme_content" class="span12">
+      <{includeq file="$theme_name/tpl/centerZone.html"}>
+    </div>
+
+  <{/if}>
+
 </div>
-<div class="row-fluid">
-    <div class="span<{$rb_width}>">
+
+<{if $xoBlocks.canvas_right}>
+  <div id="xoops_theme_right_zone" class="row-fluid" style="<{$rightBlocks2}>">
+    <div class="<{if $theme_kind=="bootstrap"}>span<{/if}><{$rb_width}>">
       <{includeq file="$theme_name/tpl/rightBottom.html"}>
     </div>
+  </div>
+<{/if}>

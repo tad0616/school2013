@@ -24,20 +24,26 @@ $theme_center_color='#FFFFFF';
 $theme_slide_width=12;
 
 //佈景首頁展示圖片高度
-$theme_slide_height=300;
+$theme_slide_height=0;
 
 //佈景欲設背景
 $theme_default_background='158.gif';
 
 //區塊標題文字顏色
-$theme_bt_text='';
+$theme_bt_text='#FFFFFF';
 
 //區塊標題底圖
-$theme_bt_bg_img='';
+$theme_bt_bg_img='green.gif';
 
 //區塊標題文字內距
-$theme_bt_text_padding='';
+$theme_bt_text_padding=33;
+
+//區塊標題文字大小
+$theme_bt_text_size='16px';
 
 //區塊標題底色
 $theme_bt_bg_color='';
+
+//區塊標題底圖重複
+$theme_bt_bg_repeat='1';
 ?>

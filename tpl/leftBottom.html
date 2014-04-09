@@ -1,30 +1,35 @@
-<{assign var="i" value=0}>
-<{assign var="total" value=1}>
+<{if $xoBlocks.canvas_left}>
+  <{assign var="i" value=0}>
+  <{assign var="total" value=1}>
 
-<div id="leftBlock" class="well" style="<{$leftBlock}>">
-  <{foreach item=block from=$xoBlocks.canvas_left}>
-    <{if $i==0}>
-    <div class="row-fluid">
-    <{/if}>
-    
-    <{if $block.content}>
-      <fieldset style="float:left;margin-right:20px;min-width:160px;width: auto !important;width: 160px;">
-      <{if $block.title}>
-        <{if $xoops_isadmin}>
-          <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a><br style="clear:both;">
-        <{/if}>
-        <{includeq file="$theme_name/tpl/blockTitle.html"}>
+  <div class="leftBlock">
+    <{foreach item=block from=$xoBlocks.canvas_left}>
+      <{if $i==0}>
+        <div class="row-fluid">
       <{/if}>
-      <div class="blockContent"><{$block.content}></div>
-      </fieldset>
-    <{/if}>
 
-    <{assign var="i" value=$i+1}>
-    <{assign var="total" value=$total+1}>
-    <{if $i == 4 || $total==$count}>
-      </div>
-      <{assign var="i" value=0}>
-    <{/if}>
-  <{/foreach}>
-  <div class="clearfix"></div>
-</div>
+      <{if $block.content}>
+        <div class="span3">
+          <{if $block.title}>
+            <{if $xoops_isadmin}>
+              <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a>
+              <div style="clear:both;"></div>
+            <{/if}>
+            <{includeq file="$theme_name/tpl/blockTitle.html"}>
+          <{/if}>
+          <div class="blockContent">
+            <{$block.content}>
+          </div>
+        </div>
+      <{/if}>
+
+      <{assign var="i" value=$i+1}>
+      <{assign var="total" value=$total+1}>
+      <{if $i == 4 || $total==$count}>
+        </div>
+        <{assign var="i" value=0}>
+      <{/if}>
+    <{/foreach}>
+    <div class="clearfix"></div>
+  </div>
+<{/if}>

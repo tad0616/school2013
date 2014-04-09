@@ -1,17 +1,31 @@
-<{if $xoBlocks.canvas_left or $xoBlocks.canvas_right}>
-  <div class="span<{$center_width}>">
-    <{includeq file="$theme_name/tpl/centerZone.html"}>
-  </div>
-  <div class="span<{$rb_width}>">
-    <{if $xoBlocks.canvas_left}>
-      <{includeq file="$theme_name/tpl/leftBlock.html"}>
-    <{/if}>
-    <{if $xoBlocks.canvas_right}>
-      <{includeq file="$theme_name/tpl/rightBlock.html"}>
-    <{/if}>
-  </div>
-<{else}>  
-  <div class="span12">
-    <{includeq file="$theme_name/tpl/centerZone.html"}>
-  </div>
-<{/if}>
+<div id="xoops_theme_content_zone" class="row-fluid">
+
+  <{if $xoBlocks.canvas_left or $xoBlocks.canvas_right}>
+
+    <div id="xoops_theme_content" class="<{if $theme_kind=="bootstrap"}>span<{/if}><{$center_width}>">
+      <{includeq file="$theme_name/tpl/centerZone.html"}>
+    </div>
+
+    <div id="xoops_theme_right_zone" class="<{if $theme_kind=="bootstrap"}>span<{/if}><{$rb_width}>">
+      <div id="xoops_theme_left"  style="<{$leftBlocks}>">
+        <{if $xoBlocks.canvas_left}>
+          <{includeq file="$theme_name/tpl/leftBlock.html"}>
+        <{/if}>
+      </div>
+
+      <div id="xoops_theme_right"  style="<{$rightBlocks}>">
+        <{if $xoBlocks.canvas_right}>
+          <{includeq file="$theme_name/tpl/rightBlock.html"}>
+        <{/if}>
+      </div>
+    </div>
+
+  <{else}>
+
+    <div id="xoops_theme_content" class="span12">
+      <{includeq file="$theme_name/tpl/centerZone.html"}>
+    </div>
+
+  <{/if}>
+
+</div>
