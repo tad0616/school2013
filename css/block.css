@@ -1,15 +1,6 @@
 .blockTitle{
-font-weight:bold;
-}
-
-.block{
-}
-
-.blockC{
-}
-
-
-.blockCTitle{
+  font-weight:bold;
+  font-size:16px;
 }
 
 .blockContent{
@@ -17,16 +8,19 @@ font-weight:bold;
 }
 
 
-
 /* 左區塊 */
 .leftBlock{
   position:relative;
+  width:90%;
+  margin:5px auto;
 }
 
 
 /* 右區塊 */
 .rightBlock{
   position:relative;
+  width:90%;
+  margin:5px auto;
 }
 
 /* 上中區塊 */
@@ -62,4 +56,5 @@ font-weight:bold;
 /* 下中右區塊 */
 .centerBottomRightBlock{
   position:relative;
+
 }

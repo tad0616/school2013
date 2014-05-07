@@ -1,157 +1,71 @@
 @import url("block.css");
 body {
-	font-size: 1em;
-	line-height: 1em;
-	padding-top: 0px;
+  font-size: 1em;
+  line-height: 1em;
+  padding-top: 0px;
 }
+
+p {
+  line-height:180%;
+}
+
+.navbar{
+  margin-bottom:0px;
+}
+
+/* 用來製作網頁背景效果 */
+#xoops_theme_wrap{
+
+}
+
+/* 用來製作網頁背景效果，僅html模式有效果 */
+#xoops_theme_container{
+  margin:0 auto;
+}
+
+/* 頁首 */
+#xoops_theme_header{
+
+}
+
+/* 內容區（包含各區域） */
+#xoops_theme_content_zone{
+}
+
+/* 左區域 */
+#xoops_theme_left_zone{
+
+}
+
+/* 主頁面區 */
+#xoops_theme_center{
+
+}
+
+/*主內容區*/
+#xoops_contents{
+
+}
+
+/* 右區域 */
+#xoops_theme_right_zone{
+
+}
+
+/* 頁尾 */
+#xoops_theme_footer{
+  background-position: center center;
+}
+
+
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
-div.comText {
-	text-wrap: normal;
-	table-layout: fixed;
-	word-wrap: break-word;
-	width: 545px;
-	overflow: hidden;
-}
-div.comText img {
-	max-width: 500px;
-	width: expression(this.width > 500 ? "500px": this.width);
-	overflow: hidden;
-}
-#tt1 {
-	width: 1000px;
-	margin: 0px auto;
-}
-#tt1 #tt2 {
-	width: 926px;
-	margin: 0px auto;
-}
-#tt1 #tt2 #tt3 {
-	width: 700px;
-	margin: 0px auto;
-}
-#tt_foot {
-	width: 920px;
-	margin: 10px auto;
-}
-#blackboard_year {
-	position: relative;
-	top: 59px;
-	left: 934px;
-	color: #CFCFCF;
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_month {
-	position: relative;
-	top: 81px;
-	left: 934px;
-	color: rgb(204,255,102);
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_day {
-	position: relative;
-	top: 102px;
-	left: 934px;
-	color: rgb(255,153,204);
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_week {
-	position: relative;
-	top: 170px;
-	left: 935px;
-	color: rgb(153,204,255);
-	font-size: 11px;
-	width: 20px;
-	text-align: center;
-	font-weight: bold;
-}
-/****************** 小型佈景*******************/
-#theme_title_small {
-	position: relative;
-	left: 40px;
-}
-#blackboard_small a {
-	color: rgb(0,0,0);
-	font-size: 12px;
-}
-#blackboard_small input {
-	border: 0px solid rgb(200,200,200);
-	background-color: rgb(255,255,255);
-	color: gray;
-	padding: 2px;
-	font-size: 11px;
-}
-#blackboard_small #user_menu {
-	position: relative;
-	top: 25px;
-	left: 0px;
-	color: #000000;
-	font-size: 11pt;
-	width: 600px;
-	float: right;
-	z-index: 10;
-}
-#blackboard_small .user_menu_opt {
-	display: inline;
-	margin-left: 10px;
-}
-#blackboard_small #user_menu a {
-	font-size: 11pt;
-	color: #000000;
-}
-#blackboard_small #have_mail a {
-	font-size: 30px;
-	color: rgb(255,102,255);
-	position: relative;
-	left: 80px;
-}
-#blackboard_small #login_box {
-	position: relative;
-	top: 3px;
-	left: 20px;
-	color: #ffffff;
-	font-size: 12px;
-	width: 460px;
-	float: right;
-	z-index: 10000;
-}
-#blackboard_small #login_link {
-	margin-top: 1px;
-}
-div.icon {
-	position: absolute;
-	bottom: 0px;
-	width: 72px;
-	text-align: center;
-}
-img.btn {
-	margin-left: auto;
-	margin-right: auto
-}
-#tad_main_content {
-  padding: 10px;
-	background-color: rgb(255,255,255);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-#tad_block_container {
-  padding: 10px;
-	background-color: rgb(247,246,243);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
+
 
 a.block_config {
   position:absolute;
@@ -164,6 +78,13 @@ a.block_config {
   background-image: url(../img/block_config.png);
 }
 
+a.block_config:hover {
+  background-image: url(../img/block_config_hover.png);
+}
 
-#tad_container {
+
+.xoops_content_shadow{
+  -moz-box-shadow: :0px 0px 5px 1px #333;
+  -webkit-box-shadow: :0px 0px 5px 1px #333;
+  box-shadow:0px 0px 5px 1px #333;
 }
