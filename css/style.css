@@ -1,7 +1,5 @@
 @import url("block.css");
 body {
-  font-size: 1em;
-  line-height: 1em;
   padding-top: 0px;
 }
 
@@ -11,11 +9,6 @@ p {
 
 .navbar{
   margin-bottom:0px;
-}
-
-/* 用來製作網頁背景效果 */
-#xoops_theme_wrap{
-
 }
 
 /* 用來製作網頁背景效果，僅html模式有效果 */

@@ -54,14 +54,15 @@ define("TF_FONT_FAMILY_DEFAULT", "\"Helvetica Neue\",Helvetica,Arial,\"·L³n¥¿¶ÂÅ
 define("TF_FONT_FAMILY_DESC", "¿é¤J¦r«¬¦WºÙ¡A¦³ªÅ¥Õªº³¡¥÷»Ý­n¥Î\"\"¥]°_¨Ó¡C¦p¡G" . TF_FONT_FAMILY_DEFAULT);
 define("TF_USE_SHADOW_LOGO", "³±¼v¬O§_¥]§tlogo");
 define("TF_USE_SHADOW_LOGO_DESC", "·ílogo¦b·Æ°Ê¹Ï¤å¤§¤W®É¡A¬O§_¤´­n¥[¤W³±¼v¡H");
-define("TF_USE_CONTAINER", "¥~®Ø¬O§_®M¥Î container");
-define("TF_USE_CONTAINER_DESC", "¶ÈBootStrap¼Ò¦¡¦³®Ä¡C­Y§_«h±Ä¥Î¹w³]ªº container-fluid¡]¥iµø½d³ò¸û¤j¡^");
+define("TF_USE_CONTAINER", "¬O§_¨Ï¥Î¦³­­¼e«×¡H");
+define("TF_USE_CONTAINER_DESC", "¶ÈBootStrap¼Ò¦¡¦³®Ä¡C­Y§_«h·|¥H¥þ¿Ã¹õ§e²{");
 define("TF_FOOTER_BG_CSS", "­¶§À©³¹ÏCSS³]©w");
 define("TF_FOOTER_BG_CSS_DESC", "¥i§Q¥Î¦¹³B³]©w¦UºØ­I´ºCSS³]©w¡A¨Ò¦p­«½Æ¤è¦¡¡B¦ì¸m...µ¥");
-
 define('TF_LEFT_SPARATE', '¥ª°Ï°ì¤À¹j½u');
 define('TF_LEFT_SPARATE_DESC', '¥ª°Ï°ì©M¥D¤º®e¶¡¬O§_¥[¤W¤À¹j½u');
 define('TF_RIGHT_SPARATE', '¥k°Ï°ì¤À¹j½u');
 define('TF_RIGHT_SPARATE_DESC', '¥k°Ï°ì©M¥D¤º®e¶¡¬O§_¥[¤W¤À¹j½u');
 define('TF_SPARATE_STYLE', '¥ª¥k°Ï°ì¤À¹j½uªº¼Ë¦¡');
 define('TF_SPARATE_STYLE_DESC', '¥ª¥k°Ï°ì¤À¹j½uªº¼Ë¦¡');
+define('TF_MY_CODE', '±ý¥[¤J­¶§ÀªºCSS©ÎJS»yªk');
+define('TF_MY_CODE_DESC', '¥i¦Û¦æ¸ü¤JCSS©ÎJS');

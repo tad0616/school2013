@@ -12,7 +12,7 @@ $theme_config[$i]['name']    = "use_container";
 $theme_config[$i]['text']    = TF_USE_CONTAINER;
 $theme_config[$i]['desc']    = TF_USE_CONTAINER_DESC;
 $theme_config[$i]['type']    = "yesno";
-$theme_config[$i]['default'] = "0";
+$theme_config[$i]['default'] = "1";
 
 //外框是否套用陰影
 $i++;
@@ -76,7 +76,7 @@ $theme_config[$i]['name']    = "footer_img";
 $theme_config[$i]['text']    = TF_FOOTER_IMG;
 $theme_config[$i]['desc']    = TF_FOOTER_IMG_DESC;
 $theme_config[$i]['type']    = "file";
-$theme_config[$i]['default'] = XOOPS_URL . "/themes/school2014/images/foot.jpg";
+$theme_config[$i]['default'] = XOOPS_URL . "/themes/school2015/images/foot.jpg";
 
 //頁尾底圖CSS設定
 $i++;
@@ -92,7 +92,7 @@ $theme_config[$i]['name']    = "footer_height";
 $theme_config[$i]['text']    = TF_FOOTER_HEIGHT;
 $theme_config[$i]['desc']    = TF_FOOTER_HEIGHT_DESC;
 $theme_config[$i]['type']    = "text";
-$theme_config[$i]['default'] = "200px";
+$theme_config[$i]['default'] = "180px";
 
 //頁尾底色
 $i++;
@@ -100,7 +100,7 @@ $theme_config[$i]['name']    = "footer_bgcolor";
 $theme_config[$i]['text']    = TF_FOOTER_BGCOLOR;
 $theme_config[$i]['desc']    = TF_FOOTER_BGCOLOR_DESC;
 $theme_config[$i]['type']    = "color";
-$theme_config[$i]['default'] = "#717959";
+$theme_config[$i]['default'] = "#0090d6";
 
 //頁尾文字內距
 $i++;
@@ -125,3 +125,11 @@ $theme_config[$i]['text']    = TF_FOOTER_STYLE;
 $theme_config[$i]['desc']    = TF_FOOTER_STYLE_DESC;
 $theme_config[$i]['type']    = "textarea";
 $theme_config[$i]['default'] = "line-height:180%;text-align:center;";
+
+//我要加入的js或css
+$i++;
+$theme_config[$i]['name']    = "my_code";
+$theme_config[$i]['text']    = TF_MY_CODE;
+$theme_config[$i]['desc']    = TF_MY_CODE_DESC;
+$theme_config[$i]['type']    = "text";
+$theme_config[$i]['default'] = "";
