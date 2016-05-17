@@ -50,7 +50,7 @@
     <div id="xoops_theme_container" style="position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
     <{/if}>
 
-      <div class="row" id="xoops_theme_content" style="width:auto;">
+      <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> id="xoops_theme_content" style="width:auto;">
         <!-- logo -->
         <{if $logo_img and $logo_position=="page"}>
           <div style="background-color:<{$logo_bgcolor}>">
@@ -58,11 +58,11 @@
           </div>
         <{/if}>
 
-        <div class="col-md-12">
-          <div id="xoops_theme_content_display" class="row<{if $use_shadow=='1' and $shadow_include_logo=='0'}> xoops_content_shadow<{/if}>" style="<{$content_zone}>">
-            <div class="col-md-12">
+        <div  <{if $theme_kind|substr:0:9=="bootstrap"}>class="col-md-12"<{/if}>>
+          <div id="xoops_theme_content_display" class="<{if $use_shadow=='1'}> xoops_content_shadow<{/if}>" style="<{$content_zone}>">
+
               <!-- 頁首 -->
-              <div class="row" id="xoops_theme_header">
+              <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> id="xoops_theme_header">
 
                   <!-- 導覽列 -->
                   <{if $navbar_pos!="navbar-static-bottom"}>
@@ -76,9 +76,7 @@
                   <{if $navbar_pos=="navbar-static-bottom"}>
                     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/navbar.html"}>
                   <{/if}>
-
               </div>
-
 
               <!-- 載入布局 -->
               <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/$theme_type.html"}>
@@ -90,7 +88,7 @@
                   color:<{$footer_color}>;
                 }
                 </style>
-                <div id="xoops_theme_footer" class="row" style="clear:both;margin-bottom:<{$margin_bottom}>px;height:<{$footer_height}>;background:<{$footer_bgcolor}> <{if $footer_img}>url(<{$footer_img}>)<{/if}>;<{$foot_bg_css}>">
+                <div id="xoops_theme_footer" <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> style="clear:both;margin-bottom:<{$margin_bottom}>px;height:<{$footer_height}>;background:<{$footer_bgcolor}> <{if $footer_img}>url(<{$footer_img}>)<{/if}>;<{$foot_bg_css}>">
                   <{if $xoops_isadmin}>
                     <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
                   <{/if}>
@@ -99,8 +97,6 @@
                   </div>
                 </div>
               <{/if}>
-            </div>
-          </div>
         </div>
       </div>
     </div>
