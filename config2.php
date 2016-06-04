@@ -28,7 +28,15 @@ $theme_config[$i]['name']    = "shadow_include_logo";
 $theme_config[$i]['text']    = TF_USE_SHADOW_LOGO;
 $theme_config[$i]['desc']    = TF_USE_SHADOW_LOGO_DESC;
 $theme_config[$i]['type']    = "yesno";
-$theme_config[$i]['default'] = "1";
+$theme_config[$i]['default'] = "0";
+
+//上方logo底色
+$i++;
+$theme_config[$i]['name']    = "logo_bgcolor";
+$theme_config[$i]['text']    = TF_LOGO_BGCOLOR;
+$theme_config[$i]['desc']    = TF_LOGO_BGCOLOR_DESC;
+$theme_config[$i]['type']    = "color";
+$theme_config[$i]['default'] = "transparent";
 
 //左區域和主內容間是否加上分隔線
 $i++;
@@ -61,14 +69,6 @@ $theme_config[$i]['text']    = TF_FONT_FAMILY;
 $theme_config[$i]['desc']    = TF_FONT_FAMILY_DESC;
 $theme_config[$i]['type']    = "text";
 $theme_config[$i]['default'] = constant('TF_FONT_FAMILY_DEFAULT');
-
-//上方logo底色
-$i++;
-$theme_config[$i]['name']    = "logo_bgcolor";
-$theme_config[$i]['text']    = TF_LOGO_BGCOLOR;
-$theme_config[$i]['desc']    = TF_LOGO_BGCOLOR_DESC;
-$theme_config[$i]['type']    = "color";
-$theme_config[$i]['default'] = "#FFFFFF";
 
 //頁尾底圖
 $i++;
