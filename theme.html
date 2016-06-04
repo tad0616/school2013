@@ -87,15 +87,15 @@
               <!-- 頁尾 -->
               <{if $xoops_footer}>
                 <style>
-                #xoops_theme_footer a,#xoops_theme_footer a:hover,#xoops_theme_footer a:active ,#xoops_theme_footer a:visited {
-                  color:<{$footer_color}>;
-                }
+                  #xoops_theme_footer a,#xoops_theme_footer a:hover,#xoops_theme_footer a:active ,#xoops_theme_footer a:visited {
+                    color:<{$footer_color}>;
+                  }
                 </style>
                 <div id="xoops_theme_footer" <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> style="clear:both;margin-bottom:<{$margin_bottom}>px;height:<{$footer_height}>;background:<{$footer_bgcolor}> <{if $footer_img}>url(<{$footer_img}>)<{/if}>;<{$foot_bg_css}>">
-                  <{if $xoops_isadmin}>
-                    <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
-                  <{/if}>
                   <div class="col-md-12" style="padding:<{$footer_padding}>;color:<{$footer_color}>;<{$footer_style}>">
+                    <{if $xoops_isadmin}>
+                      <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
+                    <{/if}>
                     <{$xoops_footer}>
                   </div>
                 </div>
