@@ -1,6 +1,9 @@
 <?php
 define("THEME_MODULE0", "主選單");
 define("THEME_MODULE1", "首頁");
+define("THEME_LOGIN", "請輸入帳號");
+define("THEME_PASS", "請輸入密碼");
+define("THEME_SEARCH_TEXT", "請輸入關鍵字");
 define("TF_USER_ID", "請輸入帳號");
 define("TF_USER_PASS", "請輸入密碼");
 define("TF_USER_S_ID", "帳號");
