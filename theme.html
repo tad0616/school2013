@@ -60,7 +60,7 @@
 
 
       <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="row <{if $use_shadow=='1'}>xoops_content_shadow<{/if}>"<{/if}> id="xoops_theme_content" style="width:auto;">
-        <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="col-md-12"<{/if}>>
+        <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="col-sm-12"<{/if}>>
           <div id="xoops_theme_content_display" style="<{$content_zone}>">
 
               <!-- 頁首 -->
@@ -91,7 +91,7 @@
                   }
                 </style>
                 <div id="xoops_theme_footer" <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> style="clear:both;margin-bottom:<{$margin_bottom}>px;height:<{$footer_height}>;background:<{$footer_bgcolor}> <{if $footer_img}>url(<{$footer_img}>)<{/if}>;<{$foot_bg_css}>">
-                  <div class="col-md-12" style="padding:<{$footer_padding}>;color:<{$footer_color}>;<{$footer_style}>">
+                  <div class="col-sm-12" style="padding:<{$footer_padding}>;color:<{$footer_color}>;<{$footer_style}>">
                     <{if $xoops_isadmin}>
                       <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
                     <{/if}>
