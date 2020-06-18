@@ -69,7 +69,7 @@
               <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> id="xoops_theme_header">
 
                   <!-- 導覽列 -->
-                  <{if $navbar_pos!="navbar-static-bottom"}>
+                  <{if $navbar_pos!="default"}>
                     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/navbar.tpl"}>
                   <{/if}>
 
@@ -77,7 +77,7 @@
                   <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/slideshow_responsive.tpl"}>
 
                   <!-- 導覽列 -->
-                  <{if $navbar_pos=="navbar-static-bottom"}>
+                  <{if $navbar_pos=="default"}>
                     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/navbar.tpl"}>
                   <{/if}>
               </div>

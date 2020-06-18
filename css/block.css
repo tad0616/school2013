@@ -1,12 +1,11 @@
 .blockTitle{
   font-weight:bold;
-  font-size:16px;
+  font-size: 1.1em;
 }
 
 .blockContent{
   margin: 0px 6px 10px 6px;
 }
-
 
 /* 左區塊 */
 .leftBlock{
@@ -14,7 +13,6 @@
   width:90%;
   margin:5px auto;
 }
-
 
 /* 右區塊 */
 .rightBlock{

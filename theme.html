@@ -10,7 +10,7 @@
 
     <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
     <!-- 網站的標題及標語 -->
-    <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+    <title><{$xoops_sitename}><{if $xoops_pagetitle}> - <{$xoops_pagetitle}><{/if}></title>
 
     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.tpl"}>
 
@@ -44,6 +44,7 @@
     <!-- 頁面容器 -->
 
     <{if $theme_kind=="bootstrap" or $theme_kind=="bootstrap3"}>
+    <{if $navbar_pos=="fixed-top"}><div style="margin-top: 35px;"></div><{/if}>
     <div class="<{if $use_container=='1'}>container<{else}>container-fluid<{/if}>" style="margin-top:<{$margin_top}>px;">
     <{else}>
     <div id="xoops_theme_container" style="position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
@@ -67,7 +68,7 @@
               <div <{if $theme_kind|substr:0:9=="bootstrap"}>class="row"<{/if}> id="xoops_theme_header">
 
                   <!-- 導覽列 -->
-                  <{if $navbar_pos!="navbar-static-bottom"}>
+                  <{if $navbar_pos!="default"}>
                     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/navbar.tpl"}>
                   <{/if}>
 
@@ -75,7 +76,7 @@
                   <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/slideshow_responsive.tpl"}>
 
                   <!-- 導覽列 -->
-                  <{if $navbar_pos=="navbar-static-bottom"}>
+                  <{if $navbar_pos=="default"}>
                     <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/navbar.tpl"}>
                   <{/if}>
               </div>
