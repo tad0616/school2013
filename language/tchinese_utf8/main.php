@@ -21,7 +21,7 @@ define("TF_LOGO_BGCOLOR", "上方LOGO區的底色");
 define("TF_LOGO_BGCOLOR_DESC", "上方LOGO區的底色");
 define("TF_FONT_FAMILY", "主要字型設定");
 define("TF_FONT_FAMILY_DEFAULT", "\"Helvetica Neue\",Helvetica,Arial,\"微軟正黑體\",sans-serif");
-define("TF_FONT_FAMILY_DESC", "輸入字型名稱，有空白的部份需要用\"\"包起來。如：" . TF_FONT_FAMILY_DEFAULT);
+define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。完整可用字型請參考：<a href="' . XOOPS_URL . '/modules/tadtools/fonts.php" target="_blank">' . XOOPS_URL . '/modules/tadtools/fonts.php</a>');
 define("TF_USE_SHADOW_LOGO", "陰影是否包含logo");
 define("TF_USE_SHADOW_LOGO_DESC", "當logo在滑動圖文之上時，是否仍要加上陰影？");
 define("TF_USE_CONTAINER", "是否使用有限寬度？");
@@ -36,3 +36,6 @@ define('TF_SPARATE_STYLE', '左右區域分隔線的樣式');
 define('TF_SPARATE_STYLE_DESC', '左右區域分隔線的樣式');
 define('TF_MY_CODE', '欲加入頁尾的CSS或JS語法');
 define('TF_MY_CODE_DESC', '可自行載入CSS或JS');
+
+define('TF_NAV_NO_MOUSE_OVER', '是否點擊才出現子選單');
+define('TF_NAV_NO_MOUSE_OVER_DESC', '預設為滑鼠停留就出現，選是就必須點擊才會出現');

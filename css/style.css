@@ -37,7 +37,7 @@ p {
 
 /*主內容區*/
 #xoops_contents{
-
+  padding-top: 1rem;
 }
 
 /* 右區域 */
@@ -50,7 +50,6 @@ p {
   background-position: center center;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -58,7 +57,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-
 
 a.block_config {
   position:absolute;
@@ -74,7 +72,6 @@ a.block_config {
 a.block_config:hover {
   background-image: url(../img/block_config_hover.png);
 }
-
 
 .xoops_content_shadow{
   -moz-box-shadow: :0px 0px 5px 1px #333;
