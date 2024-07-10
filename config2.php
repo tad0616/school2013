@@ -76,7 +76,7 @@ $theme_config[$i]['name'] = "footer_img";
 $theme_config[$i]['text'] = TF_FOOTER_IMG;
 $theme_config[$i]['desc'] = TF_FOOTER_IMG_DESC;
 $theme_config[$i]['type'] = "file";
-$theme_config[$i]['default'] = XOOPS_URL . "/themes/school2013/images/foot.jpg";
+$theme_config[$i]['default'] = XOOPS_URL . "/themes/school2015/images/foot.jpg";
 
 //頁尾底圖CSS設定
 $i++;
