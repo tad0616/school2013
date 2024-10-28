@@ -40,7 +40,7 @@
     </style>
   </head>
 
-  <body>
+  <body  <{$prism_setup}>>
     <!-- 頁面容器 -->
 
     <{if $theme_kind=="bootstrap" or $theme_kind=="bootstrap3"}>
